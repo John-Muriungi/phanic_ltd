@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phanica Security Services Ltd — Higher Standards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="site-nav">
+    <div class="wrap nav-inner">
+      <a href="#home" class="brand">
+        <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 2 L36 8 V20 C36 30 29 36 20 39 C11 36 4 30 4 20 V8 Z" fill="none" stroke="#c9a227"
+            stroke-width="2" />
+          <path d="M20 8 L20 24 M13 16 L27 16" stroke="#a8362c" stroke-width="2" />
+        </svg>
+        <span>PHANICA SECURITY<small>SERVICES LTD &mdash; KISII, KENYA</small></span>
+      </a>
+      <nav class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://wa.me/0776559572 " class="btn btn-ghost">+254 776 559 572</a>
+        <a href="#contact" class="btn btn-primary">Request Survey</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu"
+        onclick="document.querySelector('nav.links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home" style="border-bottom:none; padding:0;">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Manned Guarding &middot; Kisii &amp; Nyamira Counties</div>
+        <h1>A security partner that watches your premises like its <em>own</em>.</h1>
+        <p class="lede">Phanica Security Services Ltd is a Kenyan private security firm founded on integrity, honesty
+          and reliability. We go beyond detecting and reporting crime &mdash; deterring threats, protecting people and
+          property, and adding measurable value to every client we serve.</p>
+        <p class="slogan">&ldquo;Securing success.&rdquo;</p>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary">Request a Security Survey &rarr;</a>
+          <a href="#services" class="btn btn-ghost">View Our Services</a>
+        </div>
+      </div>
+
+      <div class="sweep-wrap">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img"
+          aria-label="Diagram of a guarded perimeter with patrol coverage across client sectors">
+          <defs>
+            <radialGradient id="sweepGrad" cx="0%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="#c9a227" stop-opacity="0.45" />
+              <stop offset="100%" stop-color="#c9a227" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+
+          <!-- outer perimeter -->
+          <polygon points="250,40 430,140 430,360 250,460 70,360 70,140" fill="none" stroke="#2a323f"
+            stroke-width="1.5" />
+          <!-- inner ring -->
+          <circle cx="250" cy="250" r="120" fill="none" stroke="#232a36" stroke-width="1" />
+          <circle cx="250" cy="250" r="60" fill="none" stroke="#232a36" stroke-width="1" />
+
+          <!-- rotor sweep -->
+          <g class="sweep-rotor">
+            <path d="M250,250 L250,40 A210,210 0 0 1 380,100 Z" fill="url(#sweepGrad)" />
+            <line x1="250" y1="250" x2="250" y2="40" stroke="#e8cf8f" stroke-width="1.5" />
+          </g>
+
+          <!-- center badge -->
+          <path d="M250 205 L278 218 V250 C278 268 265 282 250 288 C235 282 222 268 222 250 V218 Z" fill="#171d27"
+            stroke="#c9a227" stroke-width="1.5" />
+
+          <!-- posts -->
+          <g class="sweep-pulse">
+            <circle class="sweep-dot" cx="250" cy="40" r="4" />
+          </g>
+          <text class="sweep-post-label" x="250" y="28" text-anchor="middle">RES</text>
+
+          <circle class="sweep-dot" cx="430" cy="140" r="4" />
+          <text class="sweep-post-label" x="430" y="128" text-anchor="middle">FIN</text>
+
+          <circle class="sweep-dot" cx="430" cy="360" r="4" />
+          <text class="sweep-post-label" x="430" y="382" text-anchor="middle">HTL</text>
+
+          <circle class="sweep-dot" cx="250" cy="460" r="4" />
+          <text class="sweep-post-label" x="250" y="478" text-anchor="middle">SCH</text>
+
+          <circle class="sweep-dot" cx="70" cy="360" r="4" />
+          <text class="sweep-post-label" x="70" y="382" text-anchor="middle">AGR</text>
+
+          <circle class="sweep-dot" cx="70" cy="140" r="4" />
+          <text class="sweep-post-label" x="70" y="128" text-anchor="middle">CON</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STAT STRIP ===================== -->
+  <div class="stat-strip">
+    <div class="wrap">
+      <div class="stat">
+        <div class="num">2025</div>
+        <div class="label">Year Established</div>
+      </div>
+      <div class="stat">
+        <div class="num">02</div>
+        <div class="label">Counties &mdash; Kisii &amp; Nyamira</div>
+      </div>
+      <div class="stat">
+        <div class="num">12+</div>
+        <div class="label">Client Sectors Served</div>
+      </div>
+      <div class="stat">
+        <div class="num">24/7</div>
+        <div class="label">On Call &amp; Responsive</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Entry 01 &mdash; About Us</div>
+        <h2>Built on integrity. Operated with discipline.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>Phanica Security Services Ltd is a private limited company registered in Kenya in 2025, with its operations
+            focused on the <strong>manned guarding and protection</strong> segment. We are dedicated to offering
+            solutions that add genuine value to our clients at competitive rates.</p>
+          <p>As private security providers, we do far more than detect and report crime. We work closely with every
+            client to understand their risks, then build a response that keeps people, property and operations safe
+            &mdash; while helping control costs and protect profitability.</p>
+          <p>With operations established across <strong>Kisii and Nyamira Counties</strong> and expanding, we're
+            building long-term partnerships rather than transactional contracts. Our clients' priorities become our
+            priorities.</p>
+
+          <div class="values-list">
+            <ul>
+              <li>Conduct every engagement with integrity, honesty and reliability</li>
+              <li>Put business partners first &amp; build long-term relationships</li>
+              <li>Stay passionate about each partner's specific needs</li>
+              <li>Deliver cost-effective service that maximises client ROI</li>
+              <li>Remain on call and customer-service skilled, always</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mvv">
+          <div class="mvv-card">
+            <span class="tag">Mission</span>
+            <p>To protect and provide security services that deter crime and keep you safe &mdash; while delivering
+              superior, exceptional service across the board, making you and your property our first priority.</p>
+          </div>
+          <div class="mvv-card">
+            <span class="tag">Vision</span>
+            <p>To exceed security industry standards: vigilant in deterring incidents, professional and effective when
+              responding, and recognised as the preferred business partner and employer of choice across the region.</p>
+          </div>
+          <div class="mvv-card">
+            <span class="tag">Purpose</span>
+            <p>To maintain our clients' peace of mind by providing trusted personnel and services that prevent and
+              eliminate threats against the lives, property and interests of those we serve.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Entry 02 &mdash; Services</div>
+        <h2>Deployment capabilities</h2>
+        <p class="lede">From standing guard posts to specialist patrols, every deployment is backed by tailored
+          personnel selection, training and a written standard operating procedure (SOP) specific to your site.</p>
+      </div>
+
+      <div class="core-grid">
+        <div class="core-card">
+          <span class="num">01</span>
+          <h3>Manned Guarding</h3>
+          <p>Unarmed day and night guards stationed at gates, receptions and grounds &mdash; trained on site-specific
+            SOPs, occurrence books and incident reporting.</p>
+        </div>
+        <div class="core-card">
+          <span class="num">02</span>
+          <h3>Canine Security</h3>
+          <p>Outsourced canine patrol teams pairing a licensed, certified handler with a trained, socialised working dog
+            for high-profile venues.</p>
+        </div>
+        <div class="core-card">
+          <span class="num">03</span>
+          <h3>Fire Watch Patrol</h3>
+          <p>Trained guards monitor for fire and life-safety hazards when alarm or suppression systems are impaired,
+            logging continuous patrols of high-risk areas.</p>
+        </div>
+        <div class="core-card">
+          <span class="num">04</span>
+          <h3>Temporary &amp; Event Security</h3>
+          <p>Short-term and event-based deployments scaled to your timeline, with the same screening and training
+            standards as our permanent posts.</p>
+        </div>
+        <div class="core-card">
+          <span class="num">05</span>
+          <h3>Security Surveys &amp; Audits</h3>
+          <p>On-site risk assessments with practical, ongoing recommendations &mdash; the starting point for any new
+            guarding contract.</p>
+        </div>
+        <div class="core-card">
+          <span class="num">06</span>
+          <h3>Patrol Vehicles &amp; Motorcycles</h3>
+          <p>Mobile response units supporting static guard posts, enabling our teams to respond within the shortest time
+            possible.</p>
+        </div>
+      </div>
+
+      <div class="sectors-head">
+        <h3>Sectors we cover</h3>
+        <span class="note">CLIENT SEGMENTS &mdash; 12 LISTED</span>
+      </div>
+      <div class="sector-grid">
+        <div class="sector-chip"><span class="dot"></span>Financial &amp; Utility Providers</div>
+        <div class="sector-chip"><span class="dot"></span>Public &amp; Government Facilities</div>
+        <div class="sector-chip"><span class="dot"></span>Residences &amp; Apartments</div>
+        <div class="sector-chip"><span class="dot"></span>Oil &amp; Petroleum Sites</div>
+        <div class="sector-chip"><span class="dot"></span>Hotels &amp; Restaurants</div>
+        <div class="sector-chip"><span class="dot"></span>Schools &amp; Institutions</div>
+        <div class="sector-chip"><span class="dot"></span>Agricultural Establishments</div>
+        <div class="sector-chip"><span class="dot"></span>Hospitals &amp; Healthcare</div>
+        <div class="sector-chip"><span class="dot"></span>Retail &amp; Warehousing</div>
+        <div class="sector-chip"><span class="dot"></span>Construction Sites</div>
+        <div class="sector-chip"><span class="dot"></span>Fire Watch Patrol</div>
+        <div class="sector-chip"><span class="dot"></span>Temporary Security</div>
+      </div>
+
+      <div class="sectors-head">
+        <h3>How an engagement runs</h3>
+        <span class="note">SOP &amp; CLIENT REVIEW CYCLE</span>
+      </div>
+      <div class="ops-cycle">
+        <div class="ops-step">
+          <span class="code">STEP 01</span>
+          <h4>Survey &amp; SOP draft</h4>
+          <p>Site survey, tailored manpower selection, and a draft standard operating procedure covering emergency and
+            site-specific instructions.</p>
+        </div>
+        <div class="ops-step">
+          <span class="code">STEP 02</span>
+          <h4>Deployment &amp; handover</h4>
+          <p>Approved SOPs, uniforms and equipment go live. Shift handovers and instructions are logged in the
+            occurrence book (OB).</p>
+        </div>
+        <div class="ops-step">
+          <span class="code">STEP 03</span>
+          <h4>Reporting</h4>
+          <p>Incident reports are issued to the client with a copy retained on site, including improvement
+            recommendations where relevant.</p>
+        </div>
+        <div class="ops-step">
+          <span class="code">STEP 04</span>
+          <h4>Monthly review</h4>
+          <p>Scheduled client meetings cover risk assessments, site audits, KPIs, refresher training and a monthly
+            scorecard / SLA review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Entry 03 &mdash; Contact</div>
+        <h2>Talk to us about your security needs</h2>
+        <p class="lede">We're always open to discussion and negotiation. Reach out for a complete security survey,
+          tailored pricing, or to start a conversation about a long-term partnership.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <dl>
+            <div>
+              <dt>Corporate Office</dt>
+              <dd>Hema Building
+                <span>P.O. Box 1654&ndash;40200, Kisii, Kenya</span>
+              </dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd>+254 723 037 351
+                <span>+254 786 446 802</span>
+              </dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>info@phanicasurv.co.ke
+                <span>Marketing &amp; client relations</span>
+              </dd>
+            </div>
+            <div>
+              <dt>Operational Areas</dt>
+              <dd>Kisii &amp; Nyamira Counties
+                <span>Currently expanding into neighbouring regions</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="form-card">
+          <div class="eyebrow">Request a Survey</div>
+          <form onsubmit="event.preventDefault(); alert('Thank you. Our marketing team will be in touch shortly.');">
+            <div class="form-grid">
+              <div>
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div>
+                <label for="org">Organisation</label>
+                <input type="text" id="org" name="org" placeholder="Company / residence name">
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="07xx xxx xxx" required>
+              </div>
+              <div>
+                <label for="sector">Sector</label>
+                <select id="sector" name="sector">
+                  <option>Residence / Apartment</option>
+                  <option>Financial Institution</option>
+                  <option>Hotel / Restaurant</option>
+                  <option>School / Institution</option>
+                  <option>Healthcare Facility</option>
+                  <option>Retail / Warehouse</option>
+                  <option>Construction Site</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="message">Tell us about the site</label>
+                <textarea id="message" name="message"
+                  placeholder="Location, current security set-up, number of guards required, shift pattern..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand">
+            <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20 2 L36 8 V20 C36 30 29 36 20 39 C11 36 4 30 4 20 V8 Z" fill="none" stroke="#c9a227"
+                stroke-width="2" />
+              <path d="M20 8 L20 24 M13 16 L27 16" stroke="#a8362c" stroke-width="2" />
+            </svg>
+            <span>PHANICA SECURITY<small>SERVICES LTD</small></span>
+          </div>
+          <p class="slogan">&ldquo;Securing success.&rdquo;</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Phanica Security Services Ltd &mdash; Private Limited Company, Kisii, Kenya</span>
+        <span class="values">Integrity &middot; Trustworthy &middot; Reliability</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
