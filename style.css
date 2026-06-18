@@ -143,16 +143,21 @@ header.site-nav {
 }
 
 .nav-inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     height: 74px;
+    gap: 2.4rem;
+    /* more breathing room between brand / links / right-group */
+    padding: 0 0.6rem;
 }
 
 .brand {
-    display: flex;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.5rem 0.8rem;
     align-items: center;
-    gap: 0.7rem;
     font-family: var(--display);
     font-weight: 700;
     font-size: 1.05rem;
@@ -161,40 +166,98 @@ header.site-nav {
 }
 
 .brand .mark {
-    width: 34px;
-    height: 34px;
-    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
-.brand small {
-    display: block;
+.brand-text {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    line-height: 1;
+}
+
+.brand-sub {
+    grid-column: 1 / -1;
+    /* span beneath both columns */
+    grid-row: 2 / 3;
     font-family: var(--mono);
     font-size: 0.6rem;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.18em;
     color: var(--text-faint);
-    font-weight: 400;
-    margin-top: 2px;
+    font-weight: 700;
 }
 
+
+/* center the main links and prevent wrapping */
 nav.links {
+    justify-content: center;
+}
+
+nav.links a {
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+/* right-side group containing CTAs and socials */
+.nav-right {
     display: flex;
     align-items: center;
-    gap: 2.2rem;
+    gap: 1rem;
+    justify-self: end;
+}
+
+.nav-right .nav-cta {
+    margin-left: 0;
+}
+
+/* ensure the toggle sits at the end of the right-group */
+.menu-toggle {
+    order: 3;
 }
 
 nav.links a {
     font-family: var(--mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.14em;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-dim);
-    transition: color .2s ease;
+    transition: color .18s ease, transform .12s ease;
     position: relative;
-    padding: 0.3rem 0;
+    padding: 0.6rem 0.9rem;
+    /* balanced horizontal + vertical padding */
+    border-radius: 4px;
 }
 
 nav.links a:hover {
     color: var(--gold);
+}
+
+nav.links a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.08);
+    color: var(--gold);
+}
+
+/* group spacing: ensure even gaps that look professional */
+.nav-inner {
+    gap: 2.6rem;
+}
+
+.nav-right {
+    gap: 1.2rem;
+}
+
+@media (max-width: 920px) {
+    nav.links a {
+        padding: 0.7rem 1rem;
+    }
 }
 
 .nav-cta {
@@ -218,6 +281,131 @@ nav.links a:hover {
     height: 1.5px;
     background: var(--cream);
     display: block;
+}
+
+/* social icons placed in the header nav (visible on collapsed menus) */
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-left: 0;
+    /* avoid pushing into neighbouring blocks */
+    order: 3;
+}
+
+/* mobile copy inside the menu: hidden by default on large screens */
+.nav-socials--mobile {
+    display: none;
+}
+
+/* ensure the CTAs group stays to the right on large screens */
+.nav-cta {
+    order: 2;
+    margin-left: 0.6rem;
+}
+
+.nav-socials .social {
+    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background .15s ease, color .15s ease, transform .12s ease;
+}
+
+.nav-socials .social svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.nav-socials .social:hover {
+    color: var(--gold);
+    transform: translateY(-2px) scale(1.03);
+    background: rgba(201, 162, 39, 0.12);
+}
+
+/* ===================== HEADER TYPOGRAPHY SIZES ===================== */
+/* Explicit sizes for header elements so they remain consistent */
+.brand-name {
+    font-size: 1.2rem;
+    /* primary brand label */
+}
+
+.brand-sub {
+    font-size: 0.78rem;
+    /* adjusted earlier, keep consistent here */
+}
+
+nav.links a {
+    font-size: 0.9rem;
+    /* primary nav link size */
+}
+
+.nav-cta .btn {
+    font-size: 0.85rem;
+    /* CTA buttons in header */
+}
+
+.nav-socials .social svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Responsive reductions on smaller screens */
+@media (max-width: 920px) {
+    .brand-name {
+        font-size: 1rem;
+    }
+
+    .brand-sub {
+        font-size: 0.72rem;
+    }
+
+    nav.links a {
+        font-size: 0.86rem;
+    }
+
+    .nav-cta .btn {
+        font-size: 0.82rem;
+    }
+
+    .nav-socials .social svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* mobile-specific: hide desktop socials and style mobile copy inside nav.links */
+@media (max-width: 920px) {
+    .nav-socials {
+        display: none;
+    }
+
+    /* when the mobile menu opens, show the mobile socials full-width below links */
+    nav.links.open .nav-socials--mobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-top: 0.8rem;
+        padding-top: 0.6rem;
+        border-top: 1px solid var(--line);
+    }
+
+    /* show the menu toggle on small screens */
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* very small screens: hide the Request Survey primary button to save space */
+@media (max-width: 420px) {
+    .nav-cta .btn-primary {
+        display: none;
+    }
 }
 
 /* ===================== HERO ===================== */
@@ -509,7 +697,9 @@ section {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1.8rem;
+    gap: 2.6rem;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .sectors-head h3 {
@@ -521,12 +711,22 @@ section {
     font-family: var(--mono);
     font-size: 0.75rem;
     color: var(--text-faint);
+
+    .brand {
+        flex: 0 0 auto;
+    }
+
     letter-spacing: 0.08em;
 }
 
 .sector-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    .nav-cta {
+        order: 2;
+    }
+
     gap: 0.7rem;
     margin-bottom: 4.5rem;
 }
@@ -743,6 +943,23 @@ footer {
         display: none;
     }
 
+    /* hide socials on small screens until the menu is opened */
+    .nav-socials {
+        display: none;
+    }
+
+    .nav-socials.open {
+        display: flex;
+        position: absolute;
+        top: 74px;
+        right: var(--edge);
+        gap: 0.6rem;
+        padding: 0.5rem 0.6rem;
+        background: var(--bg-raise);
+        border-bottom: 1px solid var(--line-soft);
+        z-index: 49;
+    }
+
     nav.links.open {
         display: flex;
         position: absolute;
@@ -758,6 +975,7 @@ footer {
 
     nav.links.open a {
         padding: 0.7rem 0;
+        text-align: center;
     }
 
     .nav-cta .btn-ghost {
@@ -766,6 +984,33 @@ footer {
 
     .menu-toggle {
         display: flex;
+    }
+
+    /* mobile socials: stretch full-width beneath the nav links */
+    nav.links.open .nav-socials--mobile {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 0.6rem;
+        padding: 0.8rem 0;
+        border-top: 1px solid var(--line-soft);
+        background: transparent;
+    }
+
+    nav.links.open .nav-socials--mobile .social {
+        margin: 0;
+        width: 56px;
+        height: 56px;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    nav.links.open .nav-socials--mobile .social svg {
+        width: 28px;
+        height: 28px;
     }
 
     .hero .wrap {
