@@ -368,7 +368,7 @@
             </div>
             <div>
               <dt>Email</dt>
-              <dd>info@phanicasurv.co.ke
+              <dd>pservicesltd7@gmail.com
                 <span>Marketing &amp; client relations</span>
               </dd>
             </div>
@@ -383,43 +383,44 @@
 
         <div class="form-card">
           <div class="eyebrow">Request a Survey</div>
-          <form onsubmit="event.preventDefault(); alert('Thank you. Our marketing team will be in touch shortly.');">
+          <form action="mailto:pservicesltd7@gmail.com" method="post" enctype="text/plain"
+            onsubmit="alert('Thank you. If your browser supports mailto, your email client will open with the message.');"
             <div class="form-grid">
-              <div>
-                <label for="name">Full name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-              </div>
-              <div>
-                <label for="org">Organisation</label>
-                <input type="text" id="org" name="org" placeholder="Company / residence name">
-              </div>
-              <div>
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="07xx xxx xxx" required>
-              </div>
-              <div>
-                <label for="sector">Sector</label>
-                <select id="sector" name="sector">
-                  <option>Residence / Apartment</option>
-                  <option>Financial Institution</option>
-                  <option>Hotel / Restaurant</option>
-                  <option>School / Institution</option>
-                  <option>Healthcare Facility</option>
-                  <option>Retail / Warehouse</option>
-                  <option>Construction Site</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="full">
-                <label for="message">Tell us about the site</label>
-                <textarea id="message" name="message"
-                  placeholder="Location, current security set-up, number of guards required, shift pattern..."></textarea>
-              </div>
+            <div>
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
             </div>
-            <button type="submit" class="btn btn-primary">Send Request</button>
-          </form>
+            <div>
+              <label for="org">Organisation</label>
+              <input type="text" id="org" name="org" placeholder="Company / residence name">
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="07xx xxx xxx" required>
+            </div>
+            <div>
+              <label for="sector">Sector</label>
+              <select id="sector" name="sector">
+                <option>Residence / Apartment</option>
+                <option>Financial Institution</option>
+                <option>Hotel / Restaurant</option>
+                <option>School / Institution</option>
+                <option>Healthcare Facility</option>
+                <option>Retail / Warehouse</option>
+                <option>Construction Site</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="message">Tell us about the site</label>
+              <textarea id="message" name="message"
+                placeholder="Location, current security set-up, number of guards required, shift pattern..."></textarea>
+            </div>
         </div>
+        <button type="submit" class="btn btn-primary">Send Request</button>
+        </form>
       </div>
+    </div>
     </div>
   </section>
 
@@ -429,11 +430,8 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="brand">
-            <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M20 2 L36 8 V20 C36 30 29 36 20 39 C11 36 4 30 4 20 V8 Z" fill="none" stroke="#c9a227"
-                stroke-width="2" />
-              <path d="M20 8 L20 24 M13 16 L27 16" stroke="#a8362c" stroke-width="2" />
-            </svg>
+            <img src="logo.jpeg" alt="Updated logo for Phanica Security Services Ltd" class="mark"
+              style="width:40px; height:40px; margin-right:10px; border-radius:4px; object-fit:cover;">
             <span>PHANICA SECURITY<small>SERVICES LTD</small></span>
           </div>
           <p class="slogan">&ldquo;Securing success.&rdquo;</p>
